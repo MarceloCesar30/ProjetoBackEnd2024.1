@@ -1,18 +1,18 @@
-package controller;
+package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.controller;
 
-import entity.Autor;
+import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.Service.AutorService;
+import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Autor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class AutorController {
     @Autowired
     AutorService autorService;
-    @PostMapping ("/autorCadastrar")
-    public void cadastrarAutor(@valid @RequestBody Autor autor){
+    @PostMapping("/autorCadastrar")
+    public void cadastrarAutor( @RequestBody Autor autor){
         autorService.cadastrarAutor(autor);
     }
 

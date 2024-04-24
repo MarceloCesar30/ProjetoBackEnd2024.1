@@ -1,16 +1,18 @@
-package entity;
+package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-@entity
+@Entity
 public class Autor {
-    @id
-    @generatedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue (strategy = GenerationType.AUTO)
     private int id;
     private String nomeAutor;
 
-    public Autor(int id, String nomeAutor, int anoNascimento){
-        this.id = id;
+    public Autor(String nomeAutor, int anoNascimento){
         this.nomeAutor = nomeAutor;
 
     }
