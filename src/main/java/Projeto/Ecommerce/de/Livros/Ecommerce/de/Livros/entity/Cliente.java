@@ -10,14 +10,14 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String id_Cliente;
-    private String nome;
+    private String nomeCliente;
     private String rua;
     private String cep;
     private int telefone;
 
-    public Cliente(String id_Cliente, String nome, String rua, String cep, int telefone) {
+    public Cliente(String id_Cliente, String nomeCliente, String rua, String cep, int telefone) {
         this.id_Cliente = id_Cliente;
-        this.nome = nome;
+        this.nomeCliente = nomeCliente;
         this.rua = rua;
         this.cep = cep;
         this.telefone = telefone;
@@ -32,11 +32,11 @@ public class Cliente {
     }
 
     public String getNome() {
-        return nome;
+        return nomeCliente;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomeCliente = nome;
     }
 
     public String getRua() {

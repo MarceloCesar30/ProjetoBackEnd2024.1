@@ -10,13 +10,14 @@ public class Autor {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private int id;
-    private String nomeAutor;
+    private String autor;
 
-    public Autor(String nomeAutor, int anoNascimento){
-        this.nomeAutor = nomeAutor;
+    public Autor(int id, String autor){
+        this.id = id;
+        this.autor = autor;
 
     }
-
+    public Autor(){}
     public int getId() {
         return id;
     }
@@ -25,12 +26,12 @@ public class Autor {
         this.id = id;
     }
 
-    public String getNomeAutor() {
-        return nomeAutor;
+    public String getAutor() {
+        return autor;
     }
 
-    public void setNomeAutor(String nomeAutor) {
-        this.nomeAutor = nomeAutor;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
 }

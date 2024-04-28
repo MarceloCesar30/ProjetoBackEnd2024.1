@@ -18,14 +18,11 @@ public class AutorController {
 
     @DeleteMapping("/autorDeletar/{id}")
     public void deletarAutor(@PathVariable Integer id) {
-
-        AutorController autorService = null;
-        autorService.deletarAutor(id);
+         autorService.deletarAutor (id);
     }
 
     @GetMapping("/AutorListar")
     public List<Autor> listarAutores() {
-
         return autorService.listarAutores();
     }
 }
