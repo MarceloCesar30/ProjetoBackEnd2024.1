@@ -26,8 +26,10 @@ public class AutorController {
         return autorService.listarAutores();
     }
 
+
     @PutMapping ("/autorEditar")
     public Autor editarAutor (@RequestBody Autor autor){
+
         return autorService.editarAutor(autor);
     }
 
