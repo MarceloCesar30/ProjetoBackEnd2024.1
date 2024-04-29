@@ -4,6 +4,7 @@ import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Autor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.repository.AutorRepository;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -34,5 +35,12 @@ public class AutorService {
         List<Autor> autores = autorRepository.findAll();
         return autores;
     }
+
+    public Autor editarAutor(@RequestBody Autor autor) {
+        return  autorRepository.save(autor);
+    }
+
+
 }
+
 
