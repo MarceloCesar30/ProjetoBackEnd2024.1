@@ -15,13 +15,15 @@ public class AutorService {
     private AutorRepository autorRepository;
 
     public void deletarAutor(Autor autor) {
-            autorRepository.delete(autor);
+
+        autorRepository.delete(autor);
     }
     public void deletarAutor(Integer id) {
-            autorRepository.deleteById(id);
-    }
 
+        autorRepository.deleteById(id);
+    }
     public Autor findById(Integer id) {
+
         return autorRepository.findById(id).get();
     }
 

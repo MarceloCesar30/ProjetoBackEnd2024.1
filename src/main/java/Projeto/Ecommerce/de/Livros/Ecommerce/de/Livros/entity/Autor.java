@@ -10,7 +10,6 @@ public class Autor {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private int id;
-    
     private String autor;
 
     public Autor(int id, String autor){
@@ -20,14 +19,16 @@ public class Autor {
     }
     public Autor(){}
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
-
     public String getAutor() {
+
         return autor;
     }
 

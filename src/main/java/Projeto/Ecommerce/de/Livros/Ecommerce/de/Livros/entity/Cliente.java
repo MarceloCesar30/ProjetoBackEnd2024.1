@@ -9,34 +9,34 @@ import jakarta.persistence.Id;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id_Cliente;
+    private Integer id;
     private String nomeCliente;
     private String rua;
     private String cep;
     private int telefone;
 
-    public Cliente(String id_Cliente, String nomeCliente, String rua, String cep, int telefone) {
-        this.id_Cliente = id_Cliente;
+    public Cliente(Integer id, String nomeCliente, String rua, String cep, int telefone) {
+        this.id = id;
         this.nomeCliente = nomeCliente;
         this.rua = rua;
         this.cep = cep;
         this.telefone = telefone;
     }
-
-    public String getId_Cliente() {
-        return id_Cliente;
+    public Cliente(){}
+    public Integer getId() {
+        return id;
     }
 
-    public void setId_Cliente(String id_Cliente) {
-        this.id_Cliente = id_Cliente;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getNome() {
+    public String getNomeCliente() {
         return nomeCliente;
     }
 
-    public void setNome(String nome) {
-        this.nomeCliente = nome;
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
     public String getRua() {
