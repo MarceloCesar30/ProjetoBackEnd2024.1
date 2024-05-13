@@ -20,12 +20,12 @@ public class ClienteService {
 
             clienteRepository.delete(cliente);
         }
-        public void deletarCliente(String id_Cliente) {
+        public void deletarCliente(Integer id) {
 
-            clienteRepository.deleteById(id_Cliente);
+            clienteRepository.deleteById(id);
         }
 
-        public Cliente findById(String id) {
+        public Cliente findById(Integer id) {
 
             return clienteRepository.findById(id).get();
         }
@@ -46,6 +46,7 @@ public class ClienteService {
             return  clienteRepository.save(cliente);
         }
         public void cadastrarCliente (Cliente cliente){
+
             clienteRepository.save(cliente);
         }
 

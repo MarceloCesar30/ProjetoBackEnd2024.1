@@ -19,11 +19,11 @@ public class EditoraService {
 
         editoraRepository.delete(editora);
     }
-    public void deletarEditora(String idEditora) {
+    public void deletarEditora(Integer id) {
 
-        editoraRepository.deleteById(idEditora);
+        editoraRepository.deleteById(id);
     }
-    public Editora findById(String id) {
+    public Editora findById(Integer id) {
 
         return editoraRepository.findById(id).get();
     }
@@ -40,6 +40,7 @@ public class EditoraService {
     }
 
     public Editora editarEditora(@RequestBody Editora editora) {
+
         return  editoraRepository.save(editora);
     }
 

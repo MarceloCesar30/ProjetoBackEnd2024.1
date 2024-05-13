@@ -9,26 +9,27 @@ import jakarta.persistence.Id;
 public class Livros {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id_Livro;
+    private Integer id;
     private String autor;
     private String editora;
     private String titulo;
     private int ano;
 
-    public Livros(String id_Livro, String autor, String editora, String titulo, int ano) {
-        this.id_Livro = id_Livro;
+    public Livros(Integer id, String autor, String editora, String titulo, int ano) {
+        this.id = id;
         this.autor = autor;
         this.editora = editora;
         this.titulo = titulo;
         this.ano = ano;
     }
 
-    public String getId_Livro() {
-        return id_Livro;
+    public Integer getId() {
+
+        return id;
     }
 
-    public void setId_Livro(String id_Livro) {
-        this.id_Livro = id_Livro;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getAutor() {

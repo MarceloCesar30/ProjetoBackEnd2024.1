@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 public class ClienteController {
 
-
         @Autowired
         ClienteService clienteService;
         @PostMapping("/clienteCadastrar")
@@ -21,9 +20,9 @@ public class ClienteController {
         }
 
         @DeleteMapping("/clienteDeletar/{id}")
-        public void deletarCliente(@PathVariable String id_Cliente) {
+        public void deletarCliente(@PathVariable Integer id) {
 
-            clienteService.deletarCliente (id_Cliente);
+            clienteService.deletarCliente (id);
         }
 
         @GetMapping("/ClienteListar")
@@ -33,7 +32,7 @@ public class ClienteController {
         }
 
 
-        @PutMapping ("/clienteEditar")
+        @PutMapping("/clienteEditar")
         public Cliente editarcliente (@RequestBody Cliente cliente){
 
             return clienteService.editarCliente(cliente);

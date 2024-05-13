@@ -12,7 +12,9 @@ public class AutorController {
     @Autowired
     AutorService autorService;
     @PostMapping("/autorCadastrar")
-    public void cadastrarAutor( @RequestBody Autor autor){ autorService.cadastrarAutor(autor);
+    public void cadastrarAutor( @RequestBody Autor autor){
+
+        autorService.cadastrarAutor(autor);
     }
 
     @DeleteMapping("/autorDeletar/{id}")
@@ -26,7 +28,7 @@ public class AutorController {
     }
 
 
-    @PutMapping ("/autorEditar")
+    @PutMapping("/autorEditar")
     public Autor editarAutor (@RequestBody Autor autor){
 
         return autorService.editarAutor(autor);

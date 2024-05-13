@@ -18,7 +18,7 @@ public class EditoraController {
     }
 
     @DeleteMapping("/editoraDeletar/{id}")
-    public void deletarEditora(@PathVariable String id) {
+    public void deletarEditora(@PathVariable Integer id) {
         editoraService.deletarEditora (id);
     }
 

@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 public class Carrinho {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String numeroPedido;
     private String numeroCliente;
     private String nomeCliente;
@@ -15,13 +16,22 @@ public class Carrinho {
     private int cep;
     private String formaPagamento;
 
-    public Carrinho(String numeroPedido, String numeroCliente, String nomeCliente, String cidade, int cep, String formaPagamento) {
+    public Carrinho(Integer id, String numeroPedido, String numeroCliente, String nomeCliente, String cidade, int cep, String formaPagamento) {
+        this.id = id;
         this.numeroPedido = numeroPedido;
         this.numeroCliente = numeroCliente;
         this.nomeCliente = nomeCliente;
         this.cidade = cidade;
         this.cep = cep;
         this.formaPagamento = formaPagamento;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNumeroPedido() {

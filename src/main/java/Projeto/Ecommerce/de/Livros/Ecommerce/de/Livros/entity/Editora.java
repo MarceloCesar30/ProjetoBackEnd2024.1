@@ -9,23 +9,24 @@ import jakarta.persistence.Id;
 public class Editora {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String idEditora;
+    private Integer id;
     private String nomeEditora;
 
-    public Editora(String idEditora, String nomeEditora) {
-        this.idEditora = idEditora;
+    public Editora(Integer id, String nomeEditora) {
+        this.id = id;
         this.nomeEditora = nomeEditora;
     }
 
-    public String getIdEditora() {
-        return idEditora;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdEditora(String idEditora) {
-        this.idEditora = idEditora;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNomeEditora() {
+
         return nomeEditora;
     }
 
