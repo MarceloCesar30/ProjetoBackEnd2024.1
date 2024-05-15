@@ -29,7 +29,7 @@ public class AutorController {
 
 
     @PutMapping("/autorEditar")
-    public Autor editarAutor (@RequestBody Autor autor){
+    public Autor editarAutor (@PathVariable Autor autor){
 
         return autorService.editarAutor(autor);
     }
