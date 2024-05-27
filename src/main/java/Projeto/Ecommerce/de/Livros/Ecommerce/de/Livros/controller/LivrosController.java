@@ -2,6 +2,8 @@ package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.controller;
 
 
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.Service.LivrosService;
+import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Autor;
+import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.ECommerce;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Livros;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -44,6 +46,11 @@ public class LivrosController {
 
         return livrosService.findById(id);
     }
+        @GetMapping("/buscarDestaques")
+        public List<Livros> listarLivrosDestaque() {
+
+            return livrosService.listarLivrosDestaque();
+        }
+    }
 
 
-}

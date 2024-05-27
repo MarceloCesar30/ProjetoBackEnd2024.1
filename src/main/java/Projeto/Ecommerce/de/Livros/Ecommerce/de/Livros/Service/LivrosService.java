@@ -39,6 +39,10 @@ public class LivrosService {
         List<Livros> livross = livrosRepository.findAll();
         return livross;
     }
+    public List<Livros> listarLivrosDestaque() {
+        List<Livros> destaques = livrosRepository.findByDestaquesTrue();
+        return destaques;
+    }
 
 
     public Livros editarLivros(@RequestBody Livros livros) {

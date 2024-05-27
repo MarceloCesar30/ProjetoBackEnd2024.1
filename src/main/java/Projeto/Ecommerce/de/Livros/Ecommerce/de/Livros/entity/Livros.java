@@ -14,33 +14,19 @@ public class Livros {
     private String editora;
     private String titulo;
     private int ano;
-
     private boolean destaques;
 
-    public Livros(boolean destaques) {
-        this.destaques = destaques;
-    }
-
-    public boolean isDestaques() {
-        return destaques;
-    }
-
-    public void setDestaques(boolean destaques) {
-        this.destaques = destaques;
-    }
-    //Para os pequenos (LivrosInfantis)
-    //Mais vendidos ( )
-    //Destaques do mês ()
-
-
-    public Livros(Integer id, String autor, String editora, String titulo, int ano) {
+    public Livros(Integer id, String autor, String editora, String titulo, int ano, boolean destaques) {
         this.id = id;
         this.autor = autor;
         this.editora = editora;
         this.titulo = titulo;
         this.ano = ano;
+        this.destaques = destaques;
     }
-public Livros(){}
+
+    public Livros() {
+    }
 
     public Integer getId() {
 
@@ -81,5 +67,13 @@ public Livros(){}
 
     public void setAno(int ano) {
         this.ano = ano;
+    }
+
+    public boolean isDestaques() {
+        return destaques;
+    }
+
+    public void setDestaques(boolean destaques) {
+        this.destaques = destaques;
     }
 }
