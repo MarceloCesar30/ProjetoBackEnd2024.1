@@ -1,6 +1,5 @@
 package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.controller;
 
-import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.Service.AutorService;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.Service.EditoraService;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Autor;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Editora;
@@ -14,8 +13,11 @@ public class EditoraController {
     @Autowired
     EditoraService editoraService;
     @PostMapping("/editoraCadastrar")
-    public void cadastrarEditora( @RequestBody Editora editora){ editoraService.cadastrarEditora(editora);
+    public void cadastrarEditora( @RequestBody Editora editora){
+
+        editoraService.cadastrarEditora(editora);
     }
+
 
     @DeleteMapping("/editoraDeletar/{id}")
     public void deletarEditora(@PathVariable Integer id) {
@@ -24,7 +26,14 @@ public class EditoraController {
 
     @GetMapping("/editoraListar")
     public List<Editora> listarEditores() {
+
         return editoraService.listarEditoras();
+    }
+
+    @GetMapping("/editoraListarId/{id}")
+    public Editora listarEditoraId(@PathVariable Integer id) {
+
+        return editoraService.findById(id);
     }
 
 

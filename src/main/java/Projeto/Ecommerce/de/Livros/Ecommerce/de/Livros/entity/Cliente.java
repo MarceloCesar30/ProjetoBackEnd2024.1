@@ -14,15 +14,28 @@ public class Cliente {
     private String rua;
     private String cep;
     private int telefone;
+    private boolean ativo;
 
-    public Cliente(Integer id, String nomeCliente, String rua, String cep, int telefone) {
+
+
+    public Cliente(Integer id, String nomeCliente, String rua, String cep, int telefone, boolean ativo) {
         this.id = id;
         this.nomeCliente = nomeCliente;
         this.rua = rua;
         this.cep = cep;
         this.telefone = telefone;
+        this.ativo = ativo;
     }
     public Cliente(){}
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
+
     public Integer getId() {
         return id;
     }

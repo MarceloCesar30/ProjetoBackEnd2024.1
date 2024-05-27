@@ -33,13 +33,17 @@ public class ClienteController {
 
 
         @PutMapping("/clienteEditar")
-        public Cliente editarcliente (@RequestBody Cliente cliente){
-
-            return clienteService.editarCliente(cliente);
+        public void editarcliente (@RequestBody Cliente cliente) {
+            clienteService.editarCliente(cliente);
+            //return clienteService.editarCliente(cliente);
         }
+    @GetMapping("/clienteListarId/{id}")
+    public Cliente listarClientesId(@PathVariable Integer id) {
 
-
+        return clienteService.findById(id);
     }
+
+  }
 
 
 

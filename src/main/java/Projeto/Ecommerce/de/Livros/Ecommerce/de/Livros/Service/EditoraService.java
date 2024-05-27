@@ -1,6 +1,7 @@
 package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.Service;
 
 
+import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Autor;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Editora;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.repository.EditoraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,7 @@ public class EditoraService {
         List<Editora> editoras = editoraRepository.findAll();
         return editoras;
     }
+
 
     public Editora editarEditora(@RequestBody Editora editora) {
 

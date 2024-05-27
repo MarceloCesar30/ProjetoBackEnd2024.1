@@ -31,10 +31,6 @@ public class ClienteService {
         }
 
 
-        //public void cadastrarCliente(Cliente cliente){
-        //    clienteRepository.save(cliente);
-
-        //}
 
         public List<Cliente> listarClientes() {
             List<Cliente> clientes = clienteRepository.findAll();

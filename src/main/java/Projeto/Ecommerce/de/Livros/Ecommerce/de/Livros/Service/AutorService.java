@@ -1,14 +1,10 @@
 package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.Service;
 
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity.Autor;
-import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.repository.AutorRepository;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
 
 
@@ -40,9 +36,14 @@ public class AutorService {
         List<Autor> autores = autorRepository.findAll();
         return autores;
     }
+//    public List<Autor> listarAutoresId(Integer id) {
+//        List<Autor> autores = autorRepository.findById(id);
+//        return autores;
+//    }
+//
 
 
-    public Autor editarAutor( Autor autor) {
+    public Autor editarAutor(@RequestBody Autor autor) {
 
         return  autorRepository.save(autor);
     }

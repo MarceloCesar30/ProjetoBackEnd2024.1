@@ -15,6 +15,24 @@ public class Livros {
     private String titulo;
     private int ano;
 
+    private boolean destaques;
+
+    public Livros(boolean destaques) {
+        this.destaques = destaques;
+    }
+
+    public boolean isDestaques() {
+        return destaques;
+    }
+
+    public void setDestaques(boolean destaques) {
+        this.destaques = destaques;
+    }
+    //Para os pequenos (LivrosInfantis)
+    //Mais vendidos ( )
+    //Destaques do mês ()
+
+
     public Livros(Integer id, String autor, String editora, String titulo, int ano) {
         this.id = id;
         this.autor = autor;
@@ -22,6 +40,7 @@ public class Livros {
         this.titulo = titulo;
         this.ano = ano;
     }
+public Livros(){}
 
     public Integer getId() {
 
