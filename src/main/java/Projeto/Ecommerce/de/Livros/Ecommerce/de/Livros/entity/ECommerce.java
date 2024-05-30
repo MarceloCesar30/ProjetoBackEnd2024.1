@@ -1,4 +1,4 @@
-package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity;
+/*package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,3 +47,4 @@ import java.util.List;
         }
 
 }
+*/

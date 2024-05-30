@@ -18,10 +18,12 @@ public class Editora {
     }
 
     public Integer getId() {
+
         return id;
     }
 
     public void setId(Integer id) {
+
         this.id = id;
     }
 
@@ -31,6 +33,7 @@ public class Editora {
     }
 
     public void setNomeEditora(String nomeEditora) {
+
         this.nomeEditora = nomeEditora;
     }
 }

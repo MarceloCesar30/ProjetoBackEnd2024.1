@@ -1,28 +1,27 @@
 package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Livros {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String autor;
-    private String editora;
+    @OneToOne
+    private  Autor autor;
+    @OneToOne
+    private Editora editora;
     private String titulo;
     private int ano;
-    private boolean destaques;
+   // private boolean destaques;
 
-    public Livros(Integer id, String autor, String editora, String titulo, int ano, boolean destaques) {
+    public Livros(Integer id, Autor autor, Editora editora, String titulo, int ano) {
         this.id = id;
         this.autor = autor;
         this.editora = editora;
         this.titulo = titulo;
         this.ano = ano;
-        this.destaques = destaques;
+       // this.destaques = destaques;
     }
 
     public Livros() {
@@ -37,19 +36,19 @@ public class Livros {
         this.id = id;
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setAutor(Autor autor) {
         this.autor = autor;
     }
 
-    public String getEditora() {
+    public Editora getEditora() {
         return editora;
     }
 
-    public void setEditora(String editora) {
+    public void setEditora(Editora editora) {
         this.editora = editora;
     }
 
@@ -69,11 +68,11 @@ public class Livros {
         this.ano = ano;
     }
 
-    public boolean isDestaques() {
-        return destaques;
-    }
-
-    public void setDestaques(boolean destaques) {
-        this.destaques = destaques;
-    }
+//    public boolean isDestaques() {
+//        return destaques;
+//    }
+//
+//    public void setDestaques(boolean destaques) {
+//        this.destaques = destaques;
+//    }
 }

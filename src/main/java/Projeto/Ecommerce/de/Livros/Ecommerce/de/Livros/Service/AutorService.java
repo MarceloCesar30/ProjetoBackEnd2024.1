@@ -36,11 +36,6 @@ public class AutorService {
         List<Autor> autores = autorRepository.findAll();
         return autores;
     }
-//    public List<Autor> listarAutoresId(Integer id) {
-//        List<Autor> autores = autorRepository.findById(id);
-//        return autores;
-//    }
-//
 
 
     public Autor editarAutor(@RequestBody Autor autor) {
@@ -49,11 +44,6 @@ public class AutorService {
     }
 
 
-
-   /* public Autor modificarAutor (Integer id) {
-        List <Autor> autors = autorRepository.findAll();
-        return autors;
-    }*/
 }
 
 

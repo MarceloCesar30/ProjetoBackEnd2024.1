@@ -25,7 +25,7 @@ public class EditoraController {
     }
 
     @GetMapping("/editoraListar")
-    public List<Editora> listarEditores() {
+    public List<Editora> listarEditoras() {
 
         return editoraService.listarEditoras();
     }
