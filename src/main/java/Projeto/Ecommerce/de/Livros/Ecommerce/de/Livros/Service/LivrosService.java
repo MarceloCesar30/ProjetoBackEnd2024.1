@@ -58,19 +58,8 @@ public class LivrosService {
         List<Livros> livrosAutores = livrosRepository.findByAutor_AutorContainingIgnoreCase(livroAutor);
         List<Livros> livrosEditoras = livrosRepository.findByEditora_NomeEditoraContainingIgnoreCase(livroAutor);
         livrosAutores.addAll(livrosp);
+        livrosAutores.addAll(livrosEditoras);
         return livrosAutores;
     }
 }
-
-//    public List<Livros> listarLivros() {
-//        List<Livros> titulo = livrosRepository.findBy(titulo);
-//        return titulo;
-//    }
-//}
-//    public Livros findBy(Livros titulo) {
-//        return titulo;
-//    }
-//    public List<Livros> listar() {
-//        return livrosRepository.findAll();
-//    }
 

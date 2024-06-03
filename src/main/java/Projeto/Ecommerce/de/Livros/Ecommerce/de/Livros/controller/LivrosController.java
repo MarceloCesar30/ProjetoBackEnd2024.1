@@ -48,32 +48,11 @@ public class LivrosController {
         return livrosService.buscarTudo(livrosAutor).stream().map(livros -> modelMapper.map(livros, Livros.class)).collect(Collectors.toList());
 }
 
-    //        @GetMapping("/buscarDestaques")
-//        public List<Livros> listarLivrosDestaque() {
-//
-//            return livrosService.listarLivrosDestaque();
-//        }
-//    @GetMapping("/buscarLivros")
-//    public String listarPesquisas() {
-//        Object livro;
-//        String Livros = "João";
-//        List<Livros> livros = livrosService.buscarLivros();
-//        //model.addAtribute("listarPesquisa",pesquisas);
-//        return livros.toString();
-//    }
+
     @GetMapping("/listarLivros")
     public List<Livros> listarLivros() {
         return livrosService.listarLivros();
     }
-//    @GetMapping("/livrosTitulo")
-//    public Livros listarTitulo(@PathVariable Livros titulo) {
-//
-//        return livrosService.findBy(titulo);
-//   }
-//    @GetMapping
-//    public List<Livros> listar() {
-//       // List<Livros> titulo = livrosService.listar();
-//        return new Livros();
-//    }
+
 }
 
