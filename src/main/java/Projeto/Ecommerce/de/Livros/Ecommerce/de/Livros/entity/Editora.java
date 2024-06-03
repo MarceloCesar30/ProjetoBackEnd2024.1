@@ -16,7 +16,7 @@ public class Editora {
         this.id = id;
         this.nomeEditora = nomeEditora;
     }
-
+    public Editora(){}
     public Integer getId() {
 
         return id;

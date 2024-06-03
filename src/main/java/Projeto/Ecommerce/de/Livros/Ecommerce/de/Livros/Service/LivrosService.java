@@ -56,7 +56,7 @@ public class LivrosService {
     public List<Livros> buscarTudo(String livroAutor){
         List<Livros> livrosp = livrosRepository.findByTituloContainingIgnoreCase(livroAutor);
         List<Livros> livrosAutores = livrosRepository.findByAutor_AutorContainingIgnoreCase(livroAutor);
-        List<Livros> livrosEditoras = livrosRepository.findByEditora_nomeEditoraContainingIgnoreCase(livroAutor);
+        List<Livros> livrosEditoras = livrosRepository.findByEditora_NomeEditoraContainingIgnoreCase(livroAutor);
         livrosAutores.addAll(livrosp);
         return livrosAutores;
     }
