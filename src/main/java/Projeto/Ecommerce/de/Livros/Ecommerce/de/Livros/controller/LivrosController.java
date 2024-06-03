@@ -43,6 +43,12 @@ public class LivrosController {
 
         return livrosService.findById(id);
     }
+
+    @GetMapping("/buscarDestaques")
+    public List<Livros> buscarDestaques() {
+        return livrosService.buscarDestaques();
+    }
+
 @GetMapping("/buscador/{livrosAutor}")
     public List<Livros> buscarTudo (@PathVariable String livrosAutor){
         return livrosService.buscarTudo(livrosAutor).stream().map(livros -> modelMapper.map(livros, Livros.class)).collect(Collectors.toList());

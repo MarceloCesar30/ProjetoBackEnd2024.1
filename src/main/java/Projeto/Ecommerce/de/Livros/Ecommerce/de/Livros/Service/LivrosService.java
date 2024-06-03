@@ -53,6 +53,11 @@ public class LivrosService {
 
         return livrosRepository.save(livros);
     }
+        public List<Livros> buscarDestaques () {
+            List<Livros> destaques = livrosRepository.findByDestaquesTrue();
+            return destaques;
+        }
+
     public List<Livros> buscarTudo(String livroAutor){
         List<Livros> livrosp = livrosRepository.findByTituloContainingIgnoreCase(livroAutor);
         List<Livros> livrosAutores = livrosRepository.findByAutor_AutorContainingIgnoreCase(livroAutor);
