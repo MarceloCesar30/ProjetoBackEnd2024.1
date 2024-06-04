@@ -53,6 +53,11 @@ public class LivrosService {
 
         return livrosRepository.save(livros);
     }
+
+    public Livros editarDestaquesTrue(@RequestBody Livros livros) {
+
+        return livrosRepository.save(livros);
+    }
         public List<Livros> buscarDestaques () {
             List<Livros> destaques = livrosRepository.findByDestaquesTrue();
             return destaques;

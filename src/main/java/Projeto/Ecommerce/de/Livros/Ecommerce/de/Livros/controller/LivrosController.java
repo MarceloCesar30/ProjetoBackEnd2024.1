@@ -31,6 +31,11 @@ public class LivrosController {
 
         livrosService.editarLivros(livros);
     }
+    @PutMapping("/editarDestaques")
+    public void editarDestaquesTrue(@RequestBody Livros livros) {
+
+        livrosService.editarLivros(livros);
+    }
 
     @DeleteMapping("/livrosDeletar/{id}")
     public void deletarLivros(@PathVariable Integer id) {

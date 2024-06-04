@@ -15,15 +15,18 @@ public class Livros {
     private int ano;
 
     private boolean destaques;
+    private String descricao;
 
 
-    public Livros(Integer id, Autor autor, Editora editora, String titulo, int ano, boolean destaques) {
+    public Livros(Integer id, Autor autor, Editora editora, String titulo, int ano, boolean destaques,String descricao) {
         this.id = id;
         this.autor = autor;
         this.editora = editora;
         this.titulo = titulo;
         this.ano = ano;
         this.destaques = destaques;
+        this.descricao = descricao;
+
 
     }
 
@@ -77,5 +80,13 @@ public class Livros {
 
     public void setDestaques(boolean destaques) {
         this.destaques = destaques;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }
