@@ -1,5 +1,6 @@
 package Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.entity;
 
+import Projeto.Ecommerce.de.Livros.Ecommerce.de.Livros.DTO.LivrosDTO;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,9 +17,12 @@ public class Livros {
 
     private boolean destaques;
     private String descricao;
+    private Double valorLivro;
+    private int quantidade;
+    private double venda;
+    private LivrosDTO livrosDTO;
 
-
-    public Livros(Integer id, Autor autor, Editora editora, String titulo, int ano, boolean destaques,String descricao) {
+    public Livros(Integer id, Autor autor, Editora editora, String titulo, int ano, boolean destaques,String descricao, Double valorLivro, int quantidade, double venda, LivrosDTO livrosDTO) {
         this.id = id;
         this.autor = autor;
         this.editora = editora;
@@ -26,11 +30,17 @@ public class Livros {
         this.ano = ano;
         this.destaques = destaques;
         this.descricao = descricao;
-
+        this.valorLivro = valorLivro;
+        this.quantidade = quantidade;
+        this.venda = venda;
+        this.livrosDTO = livrosDTO;
 
     }
 
     public Livros() {
+    }
+
+    public static void clear() {
     }
 
     public Integer getId() {
@@ -88,5 +98,42 @@ public class Livros {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Editora geteditora() {
+        return editora;
+    }
+
+    public Double getValorLivro() {
+        return valorLivro;
+    }
+
+    public void setValorLivro(Double valorLivro) {
+        this.valorLivro = valorLivro;
+    }
+
+    public Livros getLivroDTO() {
+        
+        return livrosDTO;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+        
+    }
+
+    public void setQuantidade(int i) {
+        this.quantidade = quantidade;
+    }
+
+    public void setVenda(double v) {
+    }
+
+    public Livros getLivrosDTO() {
+        return livrosDTO;
+    }
+
+    public double getVenda() {
+        return venda;
     }
 }
